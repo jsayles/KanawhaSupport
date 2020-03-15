@@ -3,7 +3,7 @@
 from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
-import portal.models
+import support.models
 
 
 class Migration(migrations.Migration):
@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 ('admin_email', models.EmailField(max_length=100, unique=True)),
                 ('phone', models.CharField(blank=True, max_length=16)),
                 ('website', models.URLField()),
-                ('logo', models.ImageField(blank=True, null=True, upload_to=portal.models.space_logo_path)),
+                ('logo', models.ImageField(blank=True, null=True, upload_to=support.models.space_logo_path)),
             ],
         ),
         migrations.CreateModel(
@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('phone', models.CharField(blank=True, max_length=16)),
-                ('photo', models.ImageField(blank=True, null=True, upload_to=portal.models.user_photo_path)),
+                ('photo', models.ImageField(blank=True, null=True, upload_to=support.models.user_photo_path)),
                 ('valid_billing', models.BooleanField(default=False)),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='profile', to=settings.AUTH_USER_MODEL)),
             ],

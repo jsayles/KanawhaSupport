@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Local settings file
-local_settings.py
+# Other Kruft
+.DS_Store

@@ -27,7 +27,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
-    'portal',
+    'support',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -64,7 +64,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'support.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
